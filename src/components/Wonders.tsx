@@ -1,6 +1,7 @@
 import Wonder1 from "../assets/wonder1.jpg";
 import Wonder2 from "../assets/wonder2.jpg";
 import Wonder3 from "../assets/wonder3.jpg";
+import { motion } from "motion/react";
 
 const wonders = [
   {
@@ -31,13 +32,20 @@ const Wonders = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl">
         {wonders.map((wonder, i) => (
           <div key={i} className="w-full">
-            <a target="_blank" href={wonder.link}>
-              <img
-                src={wonder.src}
-                alt={wonder.alt}
-                className="w-full h-full object-cover rounded-xl shadow-lg hover:scale-105 transition-transform duration-300"
-              />
-            </a>
+            <img
+              src={wonder.src}
+              alt={wonder.alt}
+              className="w-full h-full object-cover rounded-xl shadow-lg hover:scale-105 transition-transform duration-300"
+            />
+            <motion.a
+              target="_blank"
+              href={wonder.link}
+              className="text-blue-400 underline"
+              whileHover={{ x: 5 }}
+              transition={{ duration: 0.3 }}
+            >
+              View Post &rarr;
+            </motion.a>
           </div>
         ))}
       </div>

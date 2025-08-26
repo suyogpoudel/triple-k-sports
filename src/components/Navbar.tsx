@@ -17,23 +17,34 @@ const Navbar = () => {
   return (
     <nav className="bg-gray-200 fixed w-full top-0 z-50 shadow-md">
       <div className="px-4 py-2 flex justify-between items-center max-w-7xl mx-auto">
+        {/* Logo */}
         <a href="#" className="flex gap-2 justify-center items-center">
-          <img src={Logo} alt="Triple K Sports Logo" className="w-10" />
+          <img
+            src={Logo}
+            alt="Triple K Sports Logo"
+            className="w-10 scale-150"
+          />
           <p className="text-lg text-cyan font-fjalla">TRIPLE K SPORTS</p>
         </a>
 
+        {/* Desktop Links */}
         <div className="hidden md:flex gap-6 text-md text-cyan-800">
           {links.map((link, i) => (
             <a
               key={i}
               href={link.href}
-              className="hover:border-b-2 border-cyan hover:font-semibold transition-colors"
+              className="relative group transition duration-300"
             >
-              {link.label}
+              <span className="transition-colors duration-300 group-hover:text-cyan-600">
+                {link.label}
+              </span>
+              {/* Animated underline */}
+              <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-cyan-600 transition-all duration-300 group-hover:w-full"></span>
             </a>
           ))}
         </div>
 
+        {/* Mobile Menu Toggle */}
         <button
           className="md:hidden text-cyan-800"
           onClick={() => setIsOpen(!isOpen)}
@@ -42,16 +53,20 @@ const Navbar = () => {
         </button>
       </div>
 
+      {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden bg-gray-100 px-4 pb-4 flex flex-col gap-3 text-cyan-800">
           {links.map((link, i) => (
             <a
               key={i}
               href={link.href}
-              className="hover:border-b-2 border-cyan hover:font-semibold transition-colors"
+              className="relative group py-1 transition duration-300"
               onClick={() => setIsOpen(false)}
             >
-              {link.label}
+              <span className="transition-colors duration-300 group-hover:text-cyan-600">
+                {link.label}
+              </span>
+              <span className="absolute left-0 -bottom-0.5 w-0 h-[2px] bg-cyan-600 transition-all duration-300 group-hover:w-full"></span>
             </a>
           ))}
         </div>

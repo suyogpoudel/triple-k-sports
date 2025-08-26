@@ -8,7 +8,7 @@ import KM from "../assets/km.png";
 
 const Collaborations = () => {
   return (
-    <div className="min-h-dvh bg-dark text-gray-200 flex flex-col items-center py-12 px-6 border-b-2 border-gray-200">
+    <div className=" bg-dark text-gray-200 flex flex-col items-center py-12 px-6 border-b-2 border-gray-200">
       <h2 className="text-3xl font-monteserrat mb-8 font-bold">
         Collaborations
       </h2>
