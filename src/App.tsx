@@ -39,13 +39,6 @@ const App = () => {
       <Footer />
     </div>
   );
-
-  // <Home />
-  //     <Featured />
-  //     <Collaborations />
-  //     <Testimonials />
-  //     <Wonders />
-  //     <Contact />
 };
 
 export default App;
