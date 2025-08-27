@@ -12,7 +12,7 @@ const Home = () => (
     <div className="flex flex-col lg:flex-row justify-between items-center gap-12 w-full max-w-6xl">
       {/* Text Section */}
       <div className="flex flex-col gap-5 lg:w-[60%] text-center lg:text-left">
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-fjalla text-cyan leading-snug">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-monteserrat text-cyan leading-snug font-bold">
           Connecting Sports with the World.
         </h1>
         <p className="text-lg sm:text-xl opacity-90">
@@ -26,7 +26,7 @@ const Home = () => (
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             transition={{ duration: 0.3 }}
-            className="border-2 border-cyan text-cyan text-lg sm:text-xl px-4 py-2 rounded-lg cursor-pointer hover:bg-cyan hover:text-gray-200"
+            className="border-2 border-cyan text-cyan text-lg sm:text-xl px-4 py-2 rounded-lg cursor-pointer hover:bg-cyan hover:text-dark"
           >
             Hire Us!
           </motion.a>

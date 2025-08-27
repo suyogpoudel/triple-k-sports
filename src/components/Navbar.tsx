@@ -6,7 +6,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const links = [
-    { href: "/", label: "Home" },
+    { href: "#", label: "Home" },
     { href: "#featured", label: "Featured" },
     { href: "#collaborations", label: "Collaborations" },
     { href: "#testimonials", label: "Testimonials" },
@@ -24,7 +24,7 @@ const Navbar = () => {
             alt="Triple K Sports Logo"
             className="w-10 scale-150"
           />
-          <p className="text-lg text-cyan font-fjalla">TRIPLE K SPORTS</p>
+          <p className="text-lg text-cyan-2 font-fjalla">TRIPLE K SPORTS</p>
         </a>
 
         {/* Desktop Links */}
