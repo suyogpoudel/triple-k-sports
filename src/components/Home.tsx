@@ -44,7 +44,7 @@ const Home = () => (
             key={i}
             src={card.src}
             alt={card.alt}
-            className="absolute top-0 left-0 w-[90%] h-[90%] rounded-xl shadow-lg cursor-pointer"
+            className="absolute top-0 left-0 w-full h-full rounded-xl shadow-lg cursor-pointer"
             style={{ zIndex: card.z }}
             initial={{ rotate: card.rotate, x: card.x }}
             whileHover={{
