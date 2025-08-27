@@ -1,12 +1,13 @@
 import { motion } from "motion/react";
-import Poster10 from "../assets/poster10.jpg";
-import Poster3 from "../assets/poster3.jpg";
+// import Poster10 from "../assets/poster10.jpg";
+// import Poster3 from "../assets/poster3.jpg";
+import Logo from "../assets/favicon.png";
 import BG from "../assets/bg.jpg";
 
-const cards = [
-  { src: Poster10, alt: "Kalapatthar", rotate: -15, x: -70, z: 0 },
-  { src: Poster3, alt: "King Sandeep", rotate: 15, x: 70, z: 20 },
-];
+// const cards = [
+//   { src: Poster10, alt: "Kalapatthar", rotate: -15, x: -70, z: 0 },
+//   { src: Poster3, alt: "King Sandeep", rotate: 15, x: 70, z: 20 },
+// ];
 
 const Home = () => (
   <div className="relative min-h-dvh flex justify-center items-center border-b-2 border-gray-200 px-6 text-gray-200">
@@ -55,13 +56,13 @@ const Home = () => (
       </div>
 
       {/* Poster Stack */}
-      <div className="relative w-48 h-64 sm:w-60 sm:h-80 overflow-visible">
+      {/* <div className="relative w-48 h-64 sm:w-60 sm:h-80 overflow-visible">
         {cards.map((card, i) => (
           <motion.img
             key={i}
             src={card.src}
             alt={card.alt}
-            className="absolute top-0 left-0 w-full h-full rounded-xl shadow-lg cursor-pointer"
+            className="absolute top-0 left-0 h-full rounded-xl shadow-lg cursor-pointer"
             style={{ zIndex: card.z }}
             initial={{ rotate: card.rotate, x: card.x }}
             whileHover={{
@@ -73,7 +74,27 @@ const Home = () => (
             transition={{ duration: 0.3, ease: "easeInOut" }}
           />
         ))}
-      </div>
+      </div> */}
+
+      <motion.img
+        src={Logo}
+        alt="Logo"
+        className="w-[30%]"
+        initial={{
+          scale: 1,
+        }}
+        animate={{
+          scale: [1.05, 1],
+          y: [0, -5],
+          x: [0, -5],
+        }}
+        transition={{
+          duration: 2,
+          ease: "easeInOut",
+          repeatType: "mirror",
+          repeat: Infinity,
+        }}
+      />
     </div>
   </div>
 );
