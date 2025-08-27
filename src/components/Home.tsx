@@ -38,7 +38,7 @@ const Home = () => (
             whileHover={{ scale: 1.05, backgroundColor: "#43b7be" }}
             whileTap={{ scale: 0.95 }}
             transition={{ duration: 0.3 }}
-            className="border-2 border-cya text-lg sm:text-xl px-4 py-2 rounded-lg cursor-pointer bg-cyan text-dark"
+            className="border-2 border-cyan text-lg sm:text-xl px-4 py-2 rounded-lg cursor-pointer bg-cyan text-dark"
           >
             Contact Us!
           </motion.a>
