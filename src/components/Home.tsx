@@ -13,7 +13,7 @@ const Home = () => (
     className="min-h-dvh bg-cover bg-center text-gray-200 flex justify-center items-center border-b-2 border-gray-200 px-6"
     style={{ backgroundImage: `url(${BG})` }}
   >
-    <div className="flex flex-col lg:flex-row justify-between items-center gap-12 w-full max-w-6xl">
+    <div className="flex flex-col lg:flex-row justify-between items-center gap-10 w-full max-w-6xl">
       {/* Text Section */}
       <div className="flex flex-col gap-5 lg:w-[60%] text-center lg:text-left">
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-monteserrat text-cyan leading-snug font-bold">
@@ -44,7 +44,7 @@ const Home = () => (
             key={i}
             src={card.src}
             alt={card.alt}
-            className="absolute top-0 left-0 w-full h-full rounded-xl shadow-lg cursor-pointer"
+            className="absolute top-0 left-0 w-[90%] h-[90%] rounded-xl shadow-lg cursor-pointer"
             style={{ zIndex: card.z }}
             initial={{ rotate: card.rotate, x: card.x }}
             whileHover={{
