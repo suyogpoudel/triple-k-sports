@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "motion/react";
+import BG from "../assets/hireus.jpg";
 
 const Contact = () => {
   const FORM_ACCESS_KEY = "6bc7779e-83c2-4e87-891b-5225b61cb567";
@@ -29,7 +30,10 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-dvh bg-dark text-gray-200 flex flex-col items-center py-12 px-6 border-b-2">
+    <div
+      className="min-h-dvh bg-cover bg-center bg-dark text-gray-200 flex flex-col items-center py-15 px-6"
+      style={{ backgroundImage: `url(${BG})` }}
+    >
       <h2 className="text-3xl font-monteserrat mb-8 font-bold text-cyan">
         Hire Us
       </h2>
@@ -37,7 +41,7 @@ const Contact = () => {
         className="flex flex-col justify-center items-center"
         onSubmit={onSubmit}
       >
-        <div className="flex flex-col gap-5 max-sm:px-4 py-10">
+        <div className="flex flex-col gap-5 max-sm:px-6 py-10 max-w-[85%]">
           <div className="flex flex-col gap-1">
             <label htmlFor="nameField" className="text-[18px] opacity-90 px-3">
               Name<span className="text-red-500">*</span>

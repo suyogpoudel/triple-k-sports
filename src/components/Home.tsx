@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import Poster10 from "../assets/poster10.jpg";
 import Poster3 from "../assets/poster3.jpg";
+import BG from "../assets/bg.jpg";
 
 const cards = [
   { src: Poster10, alt: "Kalapatthar", rotate: -15, x: -70, z: 0 },
@@ -8,7 +9,10 @@ const cards = [
 ];
 
 const Home = () => (
-  <div className="min-h-dvh bg-dark text-gray-200 flex justify-center items-center border-b-2 border-gray-200 px-6">
+  <div
+    className="min-h-dvh bg-cover bg-center text-gray-200 flex justify-center items-center border-b-2 border-gray-200 px-6"
+    style={{ backgroundImage: `url(${BG})` }}
+  >
     <div className="flex flex-col lg:flex-row justify-between items-center gap-12 w-full max-w-6xl">
       {/* Text Section */}
       <div className="flex flex-col gap-5 lg:w-[60%] text-center lg:text-left">
