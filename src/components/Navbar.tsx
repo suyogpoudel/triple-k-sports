@@ -15,16 +15,23 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-gray-200 fixed w-full top-0 z-50 shadow-md overflow-x-hidden">
-      <div className="px-4 py-2 flex justify-between items-center max-w-7xl mx-auto w-full">
-        {/* Logo */}
-        <a href="#" className="flex gap-2 justify-center items-center">
-          <img
-            src={Logo}
-            alt="Triple K Sports Logo"
-            className="w-12" // ✅ replaced scale-150 with fixed width
-          />
-          <p className="text-lg text-cyan-2 font-fjalla">TRIPLE K SPORTS</p>
+    <nav className="fixed inset-x-0 top-0 z-50 bg-gray-200 shadow-md">
+      <div className="mx-auto w-full max-w-7xl px-4 py-2 flex items-center justify-between">
+        {/* Brand */}
+        <a href="#" className="flex items-center gap-2 min-w-0 overflow-hidden">
+          {/* Logo box: fixed layout size, scaled image inside (no layout overflow) */}
+          <span className="block w-10 h-10 overflow-hidden">
+            <img
+              src={Logo}
+              alt="Triple K Sports Logo"
+              className="w-full h-full object-contain scale-150 origin-center"
+            />
+          </span>
+
+          {/* Text: allow shrinking on tiny screens */}
+          <p className="font-fjalla text-cyan-2 text-base sm:text-lg truncate max-w-[60vw]">
+            TRIPLE K SPORTS
+          </p>
         </a>
 
         {/* Desktop Links */}
@@ -38,7 +45,6 @@ const Navbar = () => {
               <span className="transition-colors duration-300 group-hover:text-cyan-600">
                 {link.label}
               </span>
-              {/* Animated underline */}
               <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-cyan-600 transition-all duration-300 group-hover:w-full"></span>
             </a>
           ))}
@@ -46,8 +52,10 @@ const Navbar = () => {
 
         {/* Mobile Menu Toggle */}
         <button
-          className="md:hidden text-cyan-800"
-          onClick={() => setIsOpen(!isOpen)}
+          className="md:hidden text-cyan-800 shrink-0"
+          onClick={() => setIsOpen((v) => !v)}
+          aria-expanded={isOpen}
+          aria-label="Toggle menu"
         >
           {isOpen ? <IconX size={28} /> : <IconMenu2 size={28} />}
         </button>
@@ -55,7 +63,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-gray-100 w-full px-6 pb-4 flex flex-col gap-3 text-cyan-800 overflow-x-hidden">
+        <div className="md:hidden bg-gray-100 w-full px-4 pb-4 flex flex-col gap-3 text-cyan-800 overflow-x-hidden">
           {links.map((link, i) => (
             <a
               key={i}

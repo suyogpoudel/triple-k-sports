@@ -22,3 +22,8 @@
     scroll-behavior: smooth;
   }
 }
+
+html,
+body {
+  overflow-x: clip;
+} /* or hidden */
