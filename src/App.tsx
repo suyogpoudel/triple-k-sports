@@ -4,6 +4,7 @@ import Featured from "./components/Featured";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
+import ScrollToTopButton from "./components/ScrollToTopButton";
 import Testimonials from "./components/Testimonials";
 import Wonders from "./components/Wonders";
 
@@ -35,6 +36,8 @@ const App = () => {
       <section id="contact">
         <Contact />
       </section>
+
+      <ScrollToTopButton />
 
       <Footer />
     </div>
