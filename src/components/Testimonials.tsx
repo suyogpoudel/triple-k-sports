@@ -68,7 +68,7 @@ const Testimonials = () => {
           picture={KM}
           author={"Kathmandu Mavericks"}
           review={
-            "Triple K Sports captured the our spirit in every moment, turning our NKL journey into engaging stories that truly resonated with our fans. Truly appreciate their work!"
+            "Triple K Sports captured our spirit in every moment, turning our NKL journey into engaging stories that truly resonated with our fans. Truly appreciate their work!"
           }
         />
       </div>
