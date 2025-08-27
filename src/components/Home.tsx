@@ -79,7 +79,7 @@ const Home = () => (
       <motion.img
         src={Logo}
         alt="Logo"
-        className="w-[30%] max-sm:w-[50%]"
+        className="w-[30%] max-sm:w-[75%]"
         initial={{
           scale: 1,
         }}
