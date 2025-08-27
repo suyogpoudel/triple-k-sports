@@ -15,14 +15,14 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-gray-200 fixed w-full top-0 z-50 shadow-md">
-      <div className="px-4 py-2 flex justify-between items-center max-w-full mx-auto ma">
+    <nav className="bg-gray-200 fixed w-full top-0 z-50 shadow-md overflow-x-hidden">
+      <div className="px-4 py-2 flex justify-between items-center max-w-7xl mx-auto w-full">
         {/* Logo */}
         <a href="#" className="flex gap-2 justify-center items-center">
           <img
             src={Logo}
             alt="Triple K Sports Logo"
-            className="w-10 scale-150"
+            className="w-12" // ✅ replaced scale-150 with fixed width
           />
           <p className="text-lg text-cyan-2 font-fjalla">TRIPLE K SPORTS</p>
         </a>
@@ -55,7 +55,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-gray-100 px-4 pb-4 flex flex-col gap-3 text-cyan-800">
+        <div className="md:hidden bg-gray-100 w-full px-6 pb-4 flex flex-col gap-3 text-cyan-800 overflow-x-hidden">
           {links.map((link, i) => (
             <a
               key={i}
