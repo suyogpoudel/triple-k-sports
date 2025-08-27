@@ -41,7 +41,7 @@ const Contact = () => {
         className="flex flex-col justify-center items-center"
         onSubmit={onSubmit}
       >
-        <div className="flex flex-col gap-5 max-sm:px-6 py-10 max-w-[85%]">
+        <div className="flex flex-col gap-5 max-sm:px-6 py-10 w-[100%] max-sm:w-[80%]">
           <div className="flex flex-col gap-1">
             <label htmlFor="nameField" className="text-[18px] opacity-90 px-3">
               Name<span className="text-red-500">*</span>
