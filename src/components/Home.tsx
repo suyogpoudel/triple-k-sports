@@ -9,11 +9,17 @@ const cards = [
 ];
 
 const Home = () => (
-  <div
-    className="min-h-dvh bg-cover bg-center text-gray-200 flex justify-center items-center border-b-2 border-gray-200 px-6"
-    style={{ backgroundImage: `url(${BG})` }}
-  >
-    <div className="flex flex-col lg:flex-row justify-between items-center gap-10 w-full max-w-6xl">
+  <div className="relative min-h-dvh flex justify-center items-center border-b-2 border-gray-200 px-6 text-gray-200">
+    {/* Background Image */}
+    <div
+      className="absolute inset-0 bg-cover bg-center"
+      style={{ backgroundImage: `url(${BG})` }}
+    />
+    {/* Overlay to reduce opacity */}
+    <div className="absolute inset-0 bg-dark/75" />{" "}
+    {/* 40% opacity black overlay */}
+    {/* Main content */}
+    <div className="relative flex flex-col lg:flex-row justify-between items-center gap-10 w-full max-w-6xl">
       {/* Text Section */}
       <div className="flex flex-col gap-5 lg:w-[60%] text-center lg:text-left">
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-monteserrat text-cyan leading-snug font-bold">
