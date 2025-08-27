@@ -9,21 +9,21 @@ import Poster15 from "../assets/poster15.jpg";
 import Poster16 from "../assets/poster16.jpg";
 import Poster17 from "../assets/poster17.jpg";
 import Poster18 from "../assets/poster18.jpg";
-import Poster19 from "../assets/poster19.jpg";
+import Poster21 from "../assets/poster21.jpg";
 
 const posters = [
-  { src: Poster11, alt: "Poster 11" },
   { src: Poster12, alt: "Poster 12" },
-  { src: Poster3, alt: "Poster 3" },
-  { src: Poster4, alt: "Poster 4" },
   { src: Poster13, alt: "Poster 13" },
   { src: Poster6, alt: "Poster 6" },
   { src: Poster14, alt: "Poster 14" },
+  { src: Poster3, alt: "Poster 3" },
+  { src: Poster11, alt: "Poster 11" },
+  { src: Poster4, alt: "Poster 4" },
+  { src: Poster18, alt: "Poster 18" },
   { src: Poster15, alt: "Poster 15" },
   { src: Poster16, alt: "Poster 16" },
   { src: Poster17, alt: "Poster 17" },
-  { src: Poster18, alt: "Poster 18" },
-  { src: Poster19, alt: "Poster 19" },
+  { src: Poster21, alt: "Poster 21" },
 ];
 
 const Featured = () => {
@@ -39,7 +39,7 @@ const Featured = () => {
             <img
               src={poster.src}
               alt={poster.alt}
-              className="w-full aspect-4/5 object-cover rounded-xl shadow-lg hover:scale-105 transition-transform duration-300"
+              className="w-full h-full object-cover rounded-xl shadow-lg hover:scale-105 transition-transform duration-300"
             />
           </div>
         ))}
