@@ -3,6 +3,7 @@ import Contact from "./components/Contact";
 import Featured from "./components/Featured";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
+import Media from "./components/Media";
 import Navbar from "./components/Navbar";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import Testimonials from "./components/Testimonials";
@@ -23,6 +24,10 @@ const App = () => {
 
       <section id="collaborations">
         <Collaborations />
+      </section>
+
+      <section id="media">
+        <Media />
       </section>
 
       <section id="testimonials">
