@@ -19,7 +19,7 @@ const partners = [
 const Media = () => {
   return (
     <div className="bg-dark text-gray-200 flex flex-col items-center py-15 px-6">
-      <h2 className="text-3xl font-monteserrat mb-8 font-bold text-cyan">
+      <h2 className="text-3xl font-monteserrat mb-8 font-bold text-cyan max-sm:text-2xl">
         Media Outreach Partners
       </h2>
 

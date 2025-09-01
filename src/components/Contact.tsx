@@ -34,7 +34,7 @@ const Contact = () => {
       className="min-h-dvh bg-cover bg-center bg-dark text-gray-200 flex flex-col items-center py-15 px-6"
       style={{ backgroundImage: `url(${BG})` }}
     >
-      <h2 className="text-3xl font-monteserrat mb-8 font-bold text-cyan">
+      <h2 className="text-3xl font-monteserrat mb-8 font-bold text-cyan max-sm:text-2xl">
         Hire Us
       </h2>
       <form

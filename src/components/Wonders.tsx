@@ -24,7 +24,7 @@ const wonders = [
 const Wonders = () => {
   return (
     <div className="min-h-dvh bg-dark text-gray-200 flex flex-col items-center py-15 px-6 border-b-1 border-gray-200">
-      <h2 className="text-3xl font-monteserrat font-bold mb-2 text-cyan">
+      <h2 className="text-3xl font-monteserrat font-bold mb-2 text-cyan max-sm:text-2xl">
         Crafting Wonders
       </h2>
       <h3 className="text-lg mb-6 opacity-75">Where we created magic</h3>
