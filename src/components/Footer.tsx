@@ -26,7 +26,7 @@ const Footer = () => {
         </a>
       </div>
       <a
-        href="https://www.linkedin.com/in/suyogpoudel01/"
+        href="https://www.linkedin.com/in/poudelsuyog/"
         className="flex gap-1 justify-center items-center hover:text-gray-300 transition-colors duration-200"
         target="_blank"
       >
